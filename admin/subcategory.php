@@ -99,7 +99,7 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Create</button>
+												<button type="submit" name="submit" class="btn btn-success">Create</button>
 											</div>
 										</div>
 									</form>

@@ -87,7 +87,7 @@ if($status=="closed") {
 <?php } ?>
                                    <td align="center">
                                    <a href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>">
-<button type="button" class="btn btn-success">View Details</button></a>
+<button type="button" class="btn btn-primary">View Details</button></a>
                                    </td>
                                 </tr>
                               <?php } ?>

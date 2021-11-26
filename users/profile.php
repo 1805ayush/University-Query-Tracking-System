@@ -134,7 +134,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 </select>
 </div>
-<label class="col-sm-2 col-sm-2 control-label">Country </label>
+<label class="col-sm-2 col-sm-2 control-label">Registration Number </label>
 <div class="col-sm-4">
 <input type="text" name="country" required="required" value="<?php echo htmlentities($row['country']);?>" class="form-control">
 </div>
@@ -168,13 +168,6 @@ if($userphoto==""):
 </div>
 
 </div>
-
-
-
-
-
-
-
 
 
 <?php } ?>

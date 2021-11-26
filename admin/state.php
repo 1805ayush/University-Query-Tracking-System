@@ -84,16 +84,16 @@ if(isset($_GET['del']))
 </div>
 
 
-<div class="control-group">
+<!-- <div class="control-group">
 											<label class="control-label" for="basicinput">Description</label>
 											<div class="controls">
 												<textarea class="span8" name="description" rows="5"></textarea>
 											</div>
-										</div>
+										</div> -->
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Create</button>
+												<button type="submit" name="submit" class="btn btn-success">Create</button>
 											</div>
 										</div>
 									</form>
@@ -111,7 +111,7 @@ if(isset($_GET['del']))
 										<tr>
 											<th>#</th>
 											<th>State</th>
-											<th>Description</th>
+											<!-- <th>Description</th> -->
 											<th>Creation date</th>
 											<th>Last Updated</th>
 											<th>Action</th>
@@ -127,7 +127,7 @@ while($row=mysqli_fetch_array($query))
 										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
 											<td><?php echo htmlentities($row['stateName']);?></td>
-											<td><?php echo htmlentities($row['stateDescription']);?></td>
+											<!-- <td><?php echo htmlentities($row['stateDescription']);?></td> -->
 											<td> <?php echo htmlentities($row['postingDate']);?></td>
 											<td><?php echo htmlentities($row['updationDate']);?></td>
 											<td>

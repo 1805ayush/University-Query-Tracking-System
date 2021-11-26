@@ -2,6 +2,6 @@
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2022 Issue Tracking System </b> All rights reserved.
+			<b class="copyright">&copy; 2021 University Query Tracking System </b>
 		</div>
 	</div>

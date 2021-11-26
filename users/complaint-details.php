@@ -16,7 +16,7 @@ else{ ?>
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>University Query Tracking System | Issue Details</title>
+    <title>University Query Tracking System | Query Details</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -32,14 +32,14 @@ else{ ?>
 <?php include('includes/sidebar.php');?>
       <section id="main-content" style="padding-left:5%; color:#000">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Issue Details</h3>
+          	<h3><i class="fa fa-angle-right"></i> Query Details</h3>
             <hr />
 
  <?php $query=mysqli_query($con,"select tblcomplaints.*,category.categoryName as catname from tblcomplaints join category on category.id=tblcomplaints.category where userId='".$_SESSION['id']."' and complaintNumber='".$_GET['cid']."'");
 while($row=mysqli_fetch_array($query))
 {?>
           	<div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Issue Number : </b></label>
+            <label class="col-sm-2 col-sm-2 control-label"><b> Query Number : </b></label>
           		<div class="col-sm-4">
           		<p><?php echo htmlentities($row['complaintNumber']);?></p>
           		</div>
@@ -63,8 +63,8 @@ while($row=mysqli_fetch_array($query))
 
 
 
-  <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Issue Type :</b></label>
+  <!-- <div class="row mt">
+            <label class="col-sm-2 col-sm-2 control-label"><b>Query Type :</b></label>
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['complaintType']);?></p>
               </div>
@@ -72,15 +72,12 @@ while($row=mysqli_fetch_array($query))
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['state']);?></p>
               </div>
-            </div>  
+            </div>   -->
 
 
 
   <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Nature of Issue :</b></label>
-              <div class="col-sm-4">
-              <p><?php echo htmlentities($row['noc']);?></p>
-              </div>
+
 <label class="col-sm-2 col-sm-2 control-label"><b>File :</b></label>
               <div class="col-sm-4">
               <p><?php $cfile=$row['complaintFile'];
@@ -96,7 +93,7 @@ else{ ?>
               </div>
             </div> 
  <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Issue Details </label>
+            <label class="col-sm-2 col-sm-2 control-label"><b>Query Details </label>
               <div class="col-sm-10">
               <p><?php echo htmlentities($row['complaintDetails']);?></p>
               </div>
@@ -105,18 +102,28 @@ else{ ?>
 
 
 
+
 <?php 
 $ret=mysqli_query($con,"select complaintremark.remark as remark,complaintremark.status as sstatus,complaintremark.remarkDate as rdate from complaintremark join tblcomplaints on tblcomplaints.complaintNumber=complaintremark.complaintNumber where complaintremark.complaintNumber='".$_GET['cid']."'");
 while($rw=mysqli_fetch_array($ret))
 {
 ?>
+
  <div class="row mt">
-            
+
 <label class="col-sm-2 col-sm-2 control-label"><b>Remark:</b></label>
               <div class="col-sm-10">
-   <?php echo  htmlentities($rw['remark']); ?>&nbsp;&nbsp; <br /><b>Remark Date: <?php echo  htmlentities($rw['rdate']); ?></b>
+   <?php echo  htmlentities($rw['remark']); ?>&nbsp;&nbsp; <br />
+              </div>
+            </div>  <div class="row mt">
+
+<label class="col-sm-2 col-sm-2 control-label"><b>Remark Date:</b></label>
+              <div class="col-sm-10">
+   <?php echo  htmlentities($rw['rdate']); ?></b>
               </div>
             </div> 
+
+
  <div class="row mt">
             
 <label class="col-sm-2 col-sm-2 control-label"><b>Status:</b></label>

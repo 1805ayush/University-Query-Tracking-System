@@ -7,7 +7,7 @@
 								<a class="collapsed" data-toggle="collapse" href="#togglePages">
 									<i class="menu-icon icon-cog"></i>
 									<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
-									Manage Issue
+									Manage Query
 								</a>
 								<ul id="togglePages" class="collapse unstyled">
 									<li>
@@ -26,7 +26,7 @@ $num1 = mysqli_num_rows($rt);
 									<li>
 										<a href="inprocess-complaint.php">
 											<i class="icon-tasks"></i>
-											Pending Issues
+											Pending Query
                    <?php 
   $status="in Process";                   
 $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status='$status'");
@@ -38,7 +38,7 @@ $num1 = mysqli_num_rows($rt);
 									<li>
 										<a href="closed-complaint.php">
 											<i class="icon-inbox"></i>
-											Closed Issues
+											Closed Query
 	     <?php 
   $status="closed";                   
 $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status='$status'");
@@ -54,7 +54,7 @@ $num1 = mysqli_num_rows($rt);
 							<li>
 								<a href="manage-users.php">
 									<i class="menu-icon icon-group"></i>
-									Manage users
+									Manage Users
 								</a>
 							</li>
 						</ul>

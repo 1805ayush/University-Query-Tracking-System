@@ -15,7 +15,7 @@ else{
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Issue Details</title>
+	<title>Admin| Query Details</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -50,7 +50,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Issue Details</h3>
+								<h3>Query Details</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
@@ -58,15 +58,15 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 									<tbody>
 
 <?php $st='closed';
-$query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name,category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."'");
+$query=mysqli_query($con,"select tblcomplaints.*,users.country as regNo, users.fullName as name,category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."'");
 while($row=mysqli_fetch_array($query))
 {
 
 ?>									
 										<tr>
-											<td><b>Issue Number</b></td>
+											<td><b>Query Number</b></td>
 											<td><?php echo htmlentities($row['complaintNumber']);?></td>
-											<td><b>Issuet Name</b></td>
+											<td><b>Name</b></td>
 											<td> <?php echo htmlentities($row['name']);?></td>
 											<td><b>Reg Date</b></td>
 											<td><?php echo htmlentities($row['regDate']);?>
@@ -78,19 +78,19 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['catname']);?></td>
 											<td><b>SubCategory</b></td>
 											<td> <?php echo htmlentities($row['subcategory']);?></td>
-											<td><b>Issue Type</b></td>
-											<td><?php echo htmlentities($row['complaintType']);?>
+											<td><b>Registration Number</b></td>
+											<td><?php echo htmlentities($row['regNo']);?>
 											</td>
 										</tr>
-<tr>
+<!-- <tr>
 											<td><b>State </b></td>
 											<td><?php echo htmlentities($row['state']);?></td>
-											<td ><b>Nature of Issue</b></td>
+											<td ><b>Nature of Query</b></td>
 											<td colspan="3"> <?php echo htmlentities($row['noc']);?></td>
 											
-										</tr>
+										</tr> -->
 <tr>
-											<td><b>Issue Details </b></td>
+											<td><b>Query Details </b></td>
 											
 											<td colspan="5"> <?php echo htmlentities($row['complaintDetails']);?></td>
 											
@@ -127,9 +127,15 @@ while($rw=mysqli_fetch_array($ret))
 ?>
 <tr>
 <td><b>Remark</b></td>
-<td colspan="5"><?php echo  htmlentities($rw['remark']); ?> <b>Remark Date :</b><?php echo  htmlentities($rw['rdate']); ?></td>
+<td colspan="5"><?php echo  htmlentities($rw['remark']); ?> </td>
 </tr>
+<tr>
+<td><b>Remark Date </b></td>
+<td colspan="5">
+<?php echo  htmlentities($rw['rdate']); ?>
 
+</td>
+</tr>
 <tr>
 <td><b>Status</b></td>
 <td colspan="5"><?php echo  htmlentities($rw['sstatus']); ?></td>

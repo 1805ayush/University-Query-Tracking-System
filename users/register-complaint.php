@@ -78,7 +78,7 @@ function getCat(val) {
       <?php include("includes/sidebar.php");?>
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> Register Issue</h3>
+          	<h3><i class="fa fa-angle-right"></i> Register Query</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
@@ -126,12 +126,12 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 
 
-
+<!-- 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Issue Type</label>
+<label class="col-sm-2 col-sm-2 control-label">Query Type</label>
 <div class="col-sm-4">
 <select name="complaintype" class="form-control" required="">
-                <option value=" Bug"> Issue</option>
+                <option value=" Bug"> Query</option>
                   <option value="General Query">General Query</option>
                 </select> 
 </div>
@@ -150,25 +150,25 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 </select>
 </div>
-</div>
+</div> -->
 
-
+<!-- 
 <div class="form-group">
 <label class="col-sm-2 col-sm-2 control-label">Nature of Issue</label>
 <div class="col-sm-4">
 <input type="text" name="noc" required="required" value="" required="" class="form-control">
 </div>
 
-</div>
+</div> -->
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Issue Details (max 2000 words) </label>
+<label class="col-sm-2 col-sm-2 control-label">Query Details </label>
 <div class="col-sm-6">
 <textarea  name="complaindetails" required="required" cols="10" rows="10" class="form-control" maxlength="2000"></textarea>
 </div>
 </div>
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Issue Related Doc(if any) </label>
+<label class="col-sm-2 col-sm-2 control-label">Query Related Doc(if any) </label>
 <div class="col-sm-6">
 <input type="file" name="compfile" class="form-control" value="">
 </div>

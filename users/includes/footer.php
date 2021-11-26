@@ -1,3 +1,4 @@
+ <div id="footer" class="fixed-bottom">
  <footer class="site-footer">
           <div class="text-center">
               999999999 | For any queries contact Quality Assurance Team Lead
@@ -6,3 +7,4 @@
               </a>
           </div>
       </footer>
+</div>

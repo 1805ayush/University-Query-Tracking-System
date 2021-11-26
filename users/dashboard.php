@@ -35,7 +35,13 @@ if (strlen($_SESSION['login']) == 0) {
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
+    <style>
+      .col-md-2 col-sm-2 box0{
+        padding-left:50%;
+      }
+      </style>
   </head>
 
   <body>

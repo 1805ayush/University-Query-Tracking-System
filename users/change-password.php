@@ -130,8 +130,8 @@ return true;
                               </div>
                           </div>
                           <div class="form-group">
-                           <div class="col-sm-10" style="padding-left:25% ">
-<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                           <div class="col-sm-10" >
+<button type="submit" name="submit" class="btn btn-success">Submit</button>
 </div>
 </div>
 
