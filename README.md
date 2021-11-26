@@ -1,0 +1,3 @@
+# University-Query-Tracking-System
+
+We are building a user interactive website using which the students and the authorities can communicate more effectively. With our project, we aim to bridge the above-mentioned communication gap and provide a more effective and efficient communication link between the students and authorities. As most of the communication is done through emails and WhatsApp groups, managing all the queries and grievances of students becomes difficult. Using our project, management will be able to manage the queries and issues more efficiently and if the management feels that the concern is serious and not in their domain, they can redirect it to higher-up authorities.
