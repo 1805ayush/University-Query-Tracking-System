@@ -17,6 +17,8 @@ body {
     padding: 0px !important;
     margin: 0px !important;
     font-size:13px;
+    height: 100vh !important;
+    overflow: auto;
 }
 
 ul li {
@@ -2223,7 +2225,11 @@ label {
     background: #3B5998;
     color: #fff;
     padding: 10px 0;
-}
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 84.6vw !important;
+} 
 
 
 .go-top {

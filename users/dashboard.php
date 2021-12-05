@@ -111,6 +111,7 @@ if (strlen($_SESSION['login']) == 0) {
         </section>
       </section>
       <?php include("includes/footer.php"); ?>
+
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->

@@ -160,10 +160,11 @@ while ($rw=mysqli_fetch_array($sql)) {
 if($userphoto==""):
 ?>
 <img src="userimages/noimage.png" width="256" height="256" >
+<br>
 <a href="update-image.php">Change Photo</a>
 <?php else:?>
 	<img src="userimages/<?php echo htmlentities($userphoto);?>" width="256" height="256">
-	<a href="update-image.php">Change Photo</a>
+  <br>	<a href="update-image.php">Change Photo</a>
 <?php endif;?>
 </div>
 

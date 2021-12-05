@@ -58,7 +58,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 									<thead>
 										<tr>
 											<th>Issue No</th>
-											<th>Issue Name</th>
+											<th>Student Name</th>
 											<th>Reg Date</th>
 											<th>Status</th>
 											<th>Action</th>
